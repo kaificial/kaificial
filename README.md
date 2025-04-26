@@ -1,16 +1,14 @@
-## Hi there 👋
+## Hi I'm Kai!
 
-<!--
-**kaificial/kaificial** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Computer Science student at Queen's University passionate about building impactful web experiences and exploring the world of data and machine learning. 
 
-Here are some ideas to get you started:
+🌱 Currently focusing on full-stack development with React & Node.js, while diving deep into machine learning fundamentals and data pipeline design. Always excited to collaborate on open-source projects or experiment with new technologies!
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🔨 **Tech Stack**  
+⌨ Languages: JavaScript | Python | Java | SQL  
+🖼 Frameworks: React | Node.js | Express | TensorFlow  
+🗃 Databases: MongoDB | PostgreSQL | Firebase  
+☁ Cloud: AWS | Google Cloud | Docker  
+
+
+https://img1.picmix.com/output/stamp/normal/9/1/2/8/2018219_9588d.gif
