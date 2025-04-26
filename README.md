@@ -11,4 +11,4 @@ I'm a Computer Science student at Queen's University passionate about building i
 ☁ Cloud: AWS | Google Cloud | Docker  
 
 
-https://img1.picmix.com/output/stamp/normal/9/1/2/8/2018219_9588d.gif
+![f4b293a32db0415d378080badfd6db7f](https://github.com/user-attachments/assets/eb951abb-5283-4897-9078-4369075bc746)
