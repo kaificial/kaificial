@@ -2,7 +2,7 @@
 
 I'm a Computer Science student passionate about building impactful web experiences and exploring the world of data and machine learning. 
 
-Currently focusing on full-stack development with React & Node.js, while diving deep into machine learning fundamentals and data pipeline design. Always excited to collaborate on open-source projects or experiment with new technologies!
+Currently focusing on full-stack development with React, while diving deep into machine learning fundamentals and data pipeline design. Always excited to collaborate on open-source projects or experiment with new technologies!
 
 🔨 **Tech Stack**  
 Languages: JavaScript | Python | Java | CSS/HTML 
