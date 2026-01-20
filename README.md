@@ -2,7 +2,7 @@
 
 I enjoy designing and building reliable software. Currently based in Toronto, ON  studying CS @ [Queen's University](#). From algorithms to full stack solutions, I love exploring new technologies that push my skills forward!
 
-[Github](#) / [Linkedin](#) / [Email](#)
+[Website](https://kaificial.vercel.app) / [Linkedin](https://www.linkedin.com/in/newjeans/) / [Email](mailto:kaikimto@Gmail.com): kaikimto@gmail.com
 
 ### Tech Stack
 
