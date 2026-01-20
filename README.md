@@ -13,5 +13,5 @@ I enjoy designing and building reliable software. Currently based in Toronto, ON
 ![Git](https://img.shields.io/badge/-Git-000000?style=flat-square&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/-Docker-000000?style=flat-square&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/-AWS-000000?style=flat-square&logo=amazon-aws&logoColor=white) ![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![Figma](https://img.shields.io/badge/-Figma-000000?style=flat-square&logo=figma&logoColor=white)
 
 ![](https://komarev.com/ghpvc/?username=kaificial)
-
+![](https://github.com/kaificial/KaiKim/blob/main/website/public/assets/0329390d4b1d3246079df3980988d750.gif?raw=true)
 
