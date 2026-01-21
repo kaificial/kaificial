@@ -14,5 +14,4 @@ I enjoy designing and building reliable software. Currently based in Toronto, ON
 
 ![](https://komarev.com/ghpvc/?username=kaificial)
 
-![](https://github.com/kaificial/KaiKim/blob/main/website/public/assets/0329390d4b1d3246079df3980988d750.gif?raw=true)
 
