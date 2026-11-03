@@ -60,6 +60,41 @@ class Character:
             self.pos.add(tt, (x0 + (float(x1) - x0) * sx, y + RUN_BOB[i % 6]))
         self.pos.add(t1 + EPS, (float(x1), y))
 
+    def arc(self, t0, t1, x, y, bend=0.0, ease="inout", step=0.03):
+        """Move to (x, y) along a curve. bend is how far the curve bows out, in pixels."""
+        self.pos.hold(t0)
+        x0, y0 = self.pos.end_value
+        dx, dy = x - x0, y - y0
+        length = math.hypot(dx, dy) or 1.0
+        cx, cy = (x0 + x) / 2 + 2 * bend * dy / length, (y0 + y) / 2 - 2 * bend * dx / length
+        k = max(3, int(round((t1 - t0) / step)))
+        for i in range(1, k + 1):
+            s = eased(i / k, ease)
+            self.pos.add(t0 + (t1 - t0) * i / k, ((1 - s) ** 2 * x0 + 2 * (1 - s) * s * cx + s * s * x,
+                                                  (1 - s) ** 2 * y0 + 2 * (1 - s) * s * cy + s * s * y))
+
+    def drift(self, t0, t1, amp=2.0, period=1.0, sway=2.5):
+        """Float in place with a slow bob and sway."""
+        self.pos.hold(t0)
+        x, y = self.pos.end_value
+        t, i, q = t0, 0, period / 4
+        while t < t1 - q * 0.5:
+            t = min(t1, t + q)
+            i += 1
+            self.pos.add(t, (x, y - amp * math.sin(i * math.pi / 2)), "inout")
+        if sway:
+            self.wobble(t0, t1, sway, period)
+
+    def strike(self, t, move, windup="windup", lead=0.14, recover="guard", hold=0.1):
+        """Wind up, hit at time t, squash, then recover."""
+        self.pose(t - 0.04, windup, lead - 0.04, "inout")
+        self.pose(t, move, 0.04, "snap")
+        self.squash.hold(t - 0.001)
+        self.squash.add(t + 0.05, (1.1, 0.92), "out")
+        self.squash.add(t + 0.2, (1.0, 1.0), "inout")
+        if recover:
+            self.pose(t + hold + 0.14, recover, 0.14, "inout")
+
     def jitter(self, t0, t1, amp, hz=24, amp1=None):
         """Shake in place. Pass amp1 to make the shake grow (or shrink) over time."""
         self.pos.hold(t0)
