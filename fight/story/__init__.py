@@ -15,10 +15,12 @@
 15.0  The @ shield. Mochi grapples the @ off the page and it grows into a shield. It ricochets
       around the page and comes back, then a barrage of energy blasts knocks it away.
 17.2  Beam clash. Sesame's blue beam against Mochi's golden one. It explodes.
-18.3  Into space. The camera follows them up; the page slides out of frame under a starry sky.
-19.3  The mountain. Sesame punches Mochi into a mountainside and pounds her deeper into the
-      crater. Black bars slide in as she holds her up by the scruff. Then she lets go.
-23.3  Back on the page. Mochi tries one last flying kick; Sesame backflips over it, webs her up
+18.3  Into space. The camera moves up to the stars.
+19.0  Binary star. They lock paws and spin, trading blows. Sesame's last punch throws Mochi.
+20.5  The moon. Sesame throws the moon, Mochi cuts it in half, and Sesame kicks her sword away
+      from behind it.
+22.1  Hammer throw. Sesame swings Mochi on a web and throws her back down.
+23.5  Back on the page. Mochi tries one last flying kick; Sesame backflips over it, webs her up
       and hangs her from the rule in a cocoon.
 25.7  Sesame web-yanks every word back into place, salutes and swings away.
 28.2  The strand snaps, the cocoon drops back into the tunnel, and the loop starts over.
