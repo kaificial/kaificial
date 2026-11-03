@@ -56,7 +56,7 @@ def render(theme, times):
     out.extend(draw_layer("behind", p))
     out.append(sesame.svg(p))
     out.append(sesame.svg(in_space, opacity=_space_outline(times)))
-    out.append(mochi.svg(p, armed=True, katana_window=(5.9, times.boom + 0.4), pick_window=(0.0, LOOP)))
+    out.append(mochi.svg(p, armed=True, katana_window=(5.9, times.landed), pick_window=(0.0, LOOP)))
     out.extend(draw_layer("front", p))
     out.extend(draw_layer("overlay", p))
     out.append("</g></svg>")

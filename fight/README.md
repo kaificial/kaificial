@@ -7,8 +7,10 @@ Two original cats, Mochi (white, with a katana) and Sesame (a black tuxedo cat),
 through the page with superhero and anime moves: a mining entrance, a web drop, a word yanked off
 the page and cut in half, grapple wires and portals, a giant, a golden power-up that lifts the
 fallen words, the @ grabbed as a ricochet shield, a beam clash, and an explosion that throws them
-up into space. There, Sesame punches Mochi into a mountain, pounds her deeper into the crater and
-holds her up out of the rubble in a quiet, letterboxed beat. Sesame wins, spider style. No dialogue.
+up into space. There, they lock paws and whirl around each other like a binary star, Sesame
+lassos the moon and hurls it, Mochi cuts it in half, Sesame ambushes her from behind it and
+hammer-throws her burning back down to the page. The biggest hits get anime impact frames.
+Sesame wins, spider style. No dialogue.
 
 ## Building
 
@@ -27,7 +29,7 @@ make_fight.py          entry point: builds the fight and writes both SVGs
 engine/                a small keyframe animation engine
   timeline.py          Track: a list of keyframes for one value
   svg.py               number formatting and <animate> tags
-  character.py         a cat: position, pose, squash and stretch, drawing
+  character.py         a cat: position, pose, squash and stretch, curved paths, drawing
   poses.py             the stick-figure poses
   costumes.py          the cat drawings layered over the poses
   weapons.py           the katana and the pickaxe

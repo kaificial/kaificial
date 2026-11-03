@@ -73,6 +73,45 @@ def impact_lines(x, y, t, colour="fg"):
     layer("front", svg)
 
 
+def impact_frame(t, x, y, chars, dur=0.12):
+    """Anime impact frame: a black frame, then a white frame, with the cats as silhouettes.
+    Use only for big hits, at most one per second."""
+    from .afterimages import _still_figure
+    from ..timeline import sample, sample_step
+
+    def figure(c, tt, ink):
+        x0, y0 = sample(c.pos, tt)
+        a, px, py = sample(c.rot, tt)
+        sx, sy = sample(c.squash, tt)
+        f = sample_step(c.facing, tt)
+        return (f'<g transform="translate({num(x0)},{num(y0)}) rotate({num(a)} {num(px)} {num(py)}) scale({num(f * sx)},{num(sy)})">'
+                + _still_figure(c.pose_at(tt), ink, width=3.4) + "</g>")
+
+    def svg(p):
+        mid = t + dur * 0.55
+        out = []
+        for b0, b1, bg, ink, seed in ((t, mid, "#05060a", "#ffffff", 0), (mid, t + dur, "#f7f5ee", "#05060a", 7)):
+            op = Track(0)
+            op.set(b0, 1)
+            op.set(b1, 0)
+            spikes = []
+            for i in range(30):
+                a = i * 2 * math.pi / 30 + (rnd(i + seed + t) - 0.5) * 0.18
+                w = 0.012 + 0.03 * rnd(i * 3 + seed)
+                r0 = 22 + 30 * rnd(i * 5 + seed + t)
+                r1 = 900
+                spikes.append(f"M{num(x + r0 * math.cos(a))},{num(y + r0 * math.sin(a))} "
+                              f"L{num(x + r1 * math.cos(a - w))},{num(y + r1 * math.sin(a - w))} "
+                              f"L{num(x + r1 * math.cos(a + w))},{num(y + r1 * math.sin(a + w))} Z")
+            visible = [c for c in chars if sample_step(c.opacity, b0)]
+            out.append(fade_group(op) + f'<rect x="-40" y="-40" width="{W + 80}" height="{H + 80}" fill="{bg}"/>'
+                       + f'<path d="{" ".join(spikes)}" fill="{ink}"/>'
+                       + f'<circle cx="{num(x)}" cy="{num(y)}" r="14" fill="{bg}" stroke="{ink}" stroke-width="2.5"/>'
+                       + "".join(figure(c, b0, ink) for c in visible) + "</g>")
+        return "".join(out)
+    layer("overlay", svg)
+
+
 def flash(t, dur=0.06, amount=0.7, colour="flash"):
     """The whole frame flashes bright for a moment."""
     def svg(p):

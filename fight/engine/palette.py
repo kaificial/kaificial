@@ -1,8 +1,7 @@
 """Colours for the light and dark themes. They match GitHub's own light and dark page colours."""
 
-# The night sky and the mountains look the same in both themes.
-_SKY = dict(mtn_lit="#33417a", mtn_shadow="#161c3c", mtn_mid="#26305e", mtn_far="#3a4a86", mtn_hi="#8fa0d8",
-            snow="#eef3fb", snow_shade="#a9b8de", pine="#0e1430", haze="#8fb3ff")
+# Space colours, the same in both themes.
+_SKY = dict(moon="#f2efe4", moon_dark="#252c52", limb="#0e1a44", limb_glow="#8fd0ff")
 
 PALETTES = {
     "light": dict(
