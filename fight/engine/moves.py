@@ -1,21 +1,25 @@
 """Reusable fight moves built from character tracks and effects."""
 from .camera import jolt
 from .config import W
-from .effects import flash, impact_lines, spark
+from .effects import flash, impact_frame, impact_lines, spark
 from .svg import rnd
 from .timeline import sample
 
 
-def hit(t, x, y, size, *chars, big=False, dur=None, shake=None):
+def hit(t, x, y, size, *chars, big=False, dur=None, shake=None, frame=True):
     """A landed hit at (x, y): a spark, a short freeze on everyone involved, and a camera knock.
 
-    Big hits also get an impact frame and a flash. Returns the time the freeze ends.
+    Big hits also get an impact frame (or just a flash with frame=False).
+    Returns the time the freeze ends.
     """
-    dur = dur or (0.09 if big else 0.06)
-    spark(x, y, t, size)
+    dur = dur or (0.12 if big else 0.06)
+    spark(x, y, t + (0.12 if big and frame else 0), size)
     for c in chars:
         c.hitstop(t, dur)
-    if big:
+    if big and frame:
+        impact_frame(t, x, y, chars)
+        impact_lines(x, y, t + 0.12)
+    elif big:
         impact_lines(x, y, t)
         flash(t, 0.07, 0.75)
     jolt(t, shake if shake is not None else (3 if big else 1.5))
